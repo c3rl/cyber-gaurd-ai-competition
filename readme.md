@@ -21,6 +21,7 @@ We have written two methods to try to solve the challenge.
 <ol>
 <li>Embedding the text (user complaint) directly and indexing it in a vector database collection together with the category and sub-category metadata.
 <li>Summarising a batch of texts (user complaints) from similar category and sub category using an LLM and then indexing it in a different vector database collection together with the category and sub-category metadata.
+<li>Calculating average embedding of every category and subcategory pair and using these embeddings for predicting category and subcategory. It is the fastest method.
 </ol>
 The next step is to perform a near vector search and retriving 10 nearest documents and using the meta data to guess which category and sub category the input text (user complaint) might belog to.
 
