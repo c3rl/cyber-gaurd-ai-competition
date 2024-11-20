@@ -1,6 +1,6 @@
 # Cyber Gaurd AI
 <hr/>
-Categorization of cyber-complaints into various predefined categories.
+Categorization of cyber-complaints into various predefined categories and subcategories.
 
 ### The Idea
 <hr/>
@@ -21,7 +21,7 @@ We have written two methods to try to solve the challenge.
 <ol>
 <li>Embedding the text (user complaint) directly and indexing it in a vector database collection together with the category and sub-category metadata.
 <li>Summarising a batch of texts (user complaints) from a similar category and sub-category using an LLM and then indexing it in a different vector database collection together with the category and sub-category metadata.
-<li>Calculating average embedding of every category and subcategory pair and using these embeddings for predicting category and subcategory. It is the fastest method.
+<li>Calculating average embedding of every category and subcategory pair and using these embeddings for predicting category and subcategory. It is the fastest method. Together with Top-K sampling the predictions were found to be converging to correct answers after K=2.
 </ol>
 The next step is to perform a near vector search and retrieve the 10 nearest documents and use the metadata to guess which category and subcategory the input text (user complaint) might belong to.
 
@@ -30,6 +30,11 @@ The next step is to perform a near vector search and retrieve the 10 nearest doc
 It can be seen that in some cases when the predicted categories and subcategories do not match the expected values (when using test data), the predicated can either FIT or the predicted category and subcategories are a BETTER FIT than the expected values. 
 <br />
 The time to predict the classification is always less than 400 milliseconds. In production, it can possibly reach to only 10s milliseconds. 
+
+### Performance
+<hr />
+Recall tests were performed using the average embeddings method for K=1,2,3,4 and 5. The results were found to be "good". 
+<img src="average_embeddings_tests_results.png">
 
 ### Further Development
 <hr />
