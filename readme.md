@@ -33,7 +33,7 @@ The time to predict the classification is always less than 400 milliseconds. In 
 
 ### Performance
 <hr />
-Recall tests were performed using the average embeddings method for K=1,2,3,4 and 5. The results were found to be "good". 
+Recall tests were performed using the average embeddings method for K = 1,2,3,4 and 5. The results were found to be "good". The minimum recall for category is ~0.7 with K = 1, then both the category and subcategory recall shows a steady increase with an increase in K. 
 <img src="average_embeddings_tests_results.png">
 
 ### Further Development
