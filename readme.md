@@ -1,4 +1,4 @@
-# Cyber Gaurd AI
+# Cyber Guard AI
 <hr/>
 Categorization of cyber-complaints into various predefined categories and subcategories.
 
@@ -27,7 +27,7 @@ The next step is to perform a near vector search and retrieve the 10 nearest doc
 
 ### Findings
 <hr />
-It can be seen that in some cases when the predicted categories and subcategories do not match the expected values (when using test data), the predicated can either FIT or the predicted category and subcategories are a BETTER FIT than the expected values. 
+It can be seen that in some cases when the predicted categories and subcategories do not match the expected values (when using test data), the predicted can either FIT or the predicted category and subcategories are a BETTER FIT than the expected values. 
 <br />
 The time to predict the classification is always less than 400 milliseconds. In production, it can possibly reach to only 10s milliseconds. 
 
